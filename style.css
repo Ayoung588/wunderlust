@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #00bfd8, #0077b6);
+  padding: 20px 40px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  margin-right: 15px;
+}
+
+header .logo h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Layout */
+/* Navigation Styles */
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd700;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+/* Majorca Section */
+#majorca {
+  background-color: #f5f5f5;
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#majorca h2 {
+  font-size: 2.5em;
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#majorca p {
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.majora-images {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.majorca-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px;
+}
+
+.majorca-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Destination Section */
+#destinations h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#destinations p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Responsive Image */
+picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Plan Your Trip Section */
+#plan-your-trip {
+  padding: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#plan-your-trip h2 {
+  font-size: 2.5em;
+  color: #0077b6;
+  margin-bottom: 40px;
+}
+
+.trip-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trip-option {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-option:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.trip-option .icon {
+  margin-bottom: 20px;
+}
+
+.trip-option h3 {
+  font-size: 1.3em;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.trip-option a {
+  color: #00bfd8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.trip-option a:hover {
+  text-decoration: underline;
+}
+
+.trip-option svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.trip-option a svg {
+  margin-left: 5px;
+}
+
+
+
+/* Testimonials Section */
+#testimonials {
+  margin: 40px 0;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.testimonial-content {
+  text-align: left;
+}
+
+.testimonial-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.testimonial-content .location {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.testimonial-content blockquote {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+  quotes: "“" "”";
+}
+
+.testimonial-content blockquote:before {
+  content: open-quote;
+  font-size: 2em;
+  vertical-align: -0.4em;
+}
+
+.testimonial-content blockquote:after {
+  content: close-quote;
+  font-size: 2em;
+  vertical-align: -0.4em;
+}
+
+/* About Your Destination Section */
+#about-destination {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+#about-destination h2 {
+  font-size: 2.5em;
+  color: #0077b6;
+  margin-bottom: 40px;
+}
+
+.destination-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 22%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-item .icon {
+  margin-bottom: 20px;
+}
+
+.info-item h3 {
+  font-size: 1.3em;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.info-item p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+
+/* Form Styling */
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 60px; /* Added margin to lower the form */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  color: #00bfd8;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 5em;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #00bfd8;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 50%; /* Centers the button */
+}
+
+input[type="submit"]:hover {
+  background-color: #009cb6;
+}
+
+/* Style for required asterisk */
+.required {
+  color: #DE0B63;
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+/* Fieldset for contact method */
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-inline label {
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+input:focus, textarea:focus {
+  border-color: #00bfd8;
+  box-shadow: 0 0 3px #00bfd8;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #00bfd8;
+}
